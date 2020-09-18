@@ -35,18 +35,18 @@ h1{
     color: #999;
 }
 
-.switch02{
+.switch{
     margin-bottom: 25px;
 }
 
-.switch02 span{
+.switch span{
     border-bottom: 1px solid #c9c9c9;
     color: #aaa;
     margin-right: 10px;
     cursor: pointer;
 }
 
-.switch02 span.selected{
+.switch span.selected{
     color: #111;
     border-bottom: 1px solid #111;
 }

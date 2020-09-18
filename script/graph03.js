@@ -1,11 +1,4 @@
-var fg = fg || {
-    'version': 0.1,
-    'controller': {},
-    'viz02': {},
-    'viz03': {}
-};
-
-fg.viz02.appgraph = function(options){
+fg.viz03.appgraph = function(options){
 
 	var self = {};
 
@@ -161,19 +154,19 @@ fg.viz02.appgraph = function(options){
 	return self;
 };
 
-var activosGraph02 = fg.viz02.appgraph({
-	parentId : "graph02",
-	width : $('#graph02').width(),
+var activosGraph03 = fg.viz03.appgraph({
+	parentId : "graph03",
+	width : $('#graph03').width(),
     labels: labels,
-    data: data02,
+    data: data03,
 	height: 330
 });
 
-activosGraph02.prerender();
-activosGraph02.render(2020);
+activosGraph03.prerender();
+activosGraph03.render(2020);
 
-$('.switch02 span').click(function(){
-    $('.switch02 .selected').removeClass('selected')
+$('.switch03 span').click(function(){
+    $('.switch03 .selected').removeClass('selected')
     $(this).addClass('selected')
-    activosGraph02.render($(this).text())
+    activosGraph03.render($(this).text())
 })
