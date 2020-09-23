@@ -2,7 +2,8 @@ var fg = fg || {
     'version': 0.1,
     'controller': {},
     'viz02': {},
-    'viz03': {}
+    'viz03': {},
+    'viz04': {}
 };
 
 fg.viz02.appgraph = function(options){
