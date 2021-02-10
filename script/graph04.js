@@ -27,7 +27,7 @@ fg.viz04.appgraph = function(options){
     self.top = 0;
     self.bot = 20;
 
-    self.margin = 50;
+    self.margin = self.width/20;
 
     self.xsize = self.labels.length
     // self.xspan = (self.width - self.margin*( self.xsize - 1 ) - self.right - self.left) / self.xsize

@@ -143,7 +143,8 @@ fg.viz03.appgraph = function(options){
                 return self.left + self.scale(self.compare[year][i]) - 1;
             })
             .text(function(d,i){
-                return self.compare[year][i] + " (" + (self.compare[year][i]*100 / self.data[year][i]).toFixed(2) + "% )";
+
+                return (Math.round(self.data[year][i])+"").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ") + " (" + (self.compare[year][i]*100 / self.data[year][i]).toFixed(2) + "% )";
             })
             .style('text-anchor', function(d,i){
                 return (+self.data[year][i])*self.ratio > self.maxH ? 'end':'start'

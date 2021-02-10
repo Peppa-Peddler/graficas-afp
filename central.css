@@ -1,0 +1,27 @@
+body{
+    font-family: 'CircularStd'
+}
+
+.section{
+    padding: 10px;
+    min-height: 600px;
+    /* border-bottom: 1px dotted #111; */
+}
+
+.section .container{
+    position: relative;
+}
+
+.section .slidedesc{
+    position: absolute;
+    width: 300px;
+    right: 0;
+    top: 200px;
+}
+
+#value{
+    font-size: 250px;
+    position: fixed;
+    top: 150px;
+    left: 180px;
+}

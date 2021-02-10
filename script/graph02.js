@@ -134,7 +134,7 @@ fg.viz02.appgraph = function(options){
                 return self.left + self.scale(self.data[year][i]) - 1 + factor
             })
             .text(function(d,i){
-                return self.data[year][i]
+                return (Math.round(self.data[year][i])+"").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ");
             })
             .attr('fill', function(d,i){
                 return (+self.data[year][i])*self.ratio > self.maxH ? '#fff':'#000';

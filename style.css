@@ -1,12 +1,4 @@
-@font-face {
-  font-family: 'Sdr';
-  src: url(fonts/sdr.woff2);
-}
 
-@font-face {
-  font-family: 'Agr';
-  src: url(fonts/agr.woff2);
-}
 
 *{
     box-sizing: border-box;
@@ -14,7 +6,11 @@
 
 html, body{
     margin: 0px;
-    font-family: 'Agr';
+}
+
+html{
+    font-family: 'CircularStd';
+    padding: 20px;
 }
 
 .container{

@@ -50,17 +50,6 @@ fg.viz01.appgraph = function(options){
     self.xspan = (self.width - self.margin*( self.xsize - 1 ) - self.right - self.left) / self.xsize
     // self.yspan =  (self.height - self.margin*( self.ysize - 1 ) - self.top - self.bot) / self.ysize
 
-    self.maxH = -1
-
-    for( var i = 0; i < self.countries.length; i++ )
-        self.maxH = Math.max( self.maxH , d3.max( Object.values(self.data[self.countries[i]]).map(d => +(d.replace(/,/g, ''))) ))
-
-    console.log(self.maxH)
-
-    self.scale = d3.scale.linear()
-        .domain([0, self.maxH])
-        .range([0,self.height - self.top - self.bot]);
-
 	self.prerender = function(){
 
         self.poly = self.svg.selectAll('.tag')
@@ -76,6 +65,15 @@ fg.viz01.appgraph = function(options){
 	};
 
 	self.render = function(pais){
+
+        var maxH = d3.max( Object.values(self.data[self.countries[i]] ).map(d => +(d.replace(/,/g, ''))) )
+
+        console.log(maxH)
+
+        self.scale = d3.scale.linear()
+            .domain([0, maxH])
+            .range([0,self.height - self.top - self.bot]);
+
         self.poly
         .transition()
         .attr('height', function(d,i){
